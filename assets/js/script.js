@@ -53,31 +53,25 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// form
+// Form start 
 
-document
-  .getElementById("orderForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from refreshing the page
+function sendToWhatsApp() {
+  let academic = document.getElementById("academic").value;
+  let service = document.getElementById("service").value; 
+  let pages = document.getElementById("Pages").value;
+  let deadline = document.getElementById("deadline").value;
 
-    // Get selected values
-    let academicLevel = document.getElementById("academic").value;
-    let serviceNeeded = document.getElementById("service").value;
-    let pagesCount = document.getElementById("pages").value;
-    let clientNumber = document.getElementById("clientNumber").value;
+  let message = `Hello, I need the following service:%0A
+  🔹 Academic Level: ${academic}%0A
+  🔹 Service: ${service}%0A
+  🔹 Number of Pages: ${pages}%0A
+  🔹 Deadline: ${deadline}%0A`;
 
-    // WhatsApp number (Change to your number)
-    let phoneNumber = "923001234567"; // Example: 923001234567 for Pakistan (+92)
+  let whatsappURL = `https://wa.me/923192443185?text=${message}`; 
+  window.open(whatsappURL, "_blank");
+}
 
-    // Message format for WhatsApp
-    let message = `Hello, I want to order:\n\n📚 *Academic Level:* ${academicLevel}\n📝 *Service Needed:* ${serviceNeeded}\n📄 *Pages Count:* ${pagesCount}\n📄 *Your Number:* ${clientNumber}\n\nPlease let me know the details.`;
 
-    // Encode message for URL
-    let encodedMessage = encodeURIComponent(message);
+// Form Ending 
 
-    // Create WhatsApp link
-    let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp link in a new tab
-    window.open(whatsappURL, "_blank");
-  });
+  
