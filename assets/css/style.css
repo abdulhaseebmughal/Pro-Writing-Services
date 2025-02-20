@@ -23,6 +23,59 @@
   --white-2: hsl(0, 14%, 98%);
   --black: hsl(0, 0%, 0%);
 
+
+.video1{
+background: linear-gradient(0deg, rgb(200, 195, 195) 0%, rgba(0,81,168,1) 100%);
+}
+
+.service{
+  background-image: url(../images/second-backgorund.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /**
    * gradient color
    */
@@ -844,6 +897,7 @@ textarea.input-field {
   .hero-text {
     max-width: 60ch;
     margin-inline: auto;
+    color: #000000 !important;
   }
 
 
@@ -1308,9 +1362,7 @@ textarea.input-field {
   }
 }
 
-.video1{
-  background-image: url(https://cdn.pixabay.com/photo/2017/10/30/13/11/leave-2902472_960_720.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.section-title{
+  padding-bottom: 60px;
 }
