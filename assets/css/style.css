@@ -3,6 +3,10 @@
    * colors
    */
 
+   body{
+background: radial-gradient(circle, rgb(220, 237, 255) 0%, rgb(255, 255, 255) 100%);
+   }
+
   --safety-orange: #0051a8;
   --lavender-gray: hsl(230, 19%, 81%);
   --persian-rose: #000000;
@@ -52,6 +56,7 @@
   .icon-1 {
     color: #ffffff;
   }
+
 
   .section-title {
     color: black;
@@ -216,8 +221,112 @@ padding-top: 6px;
   border: 1px solid rgba(78, 135, 250, 0.388);
 }
 
+.heading{
+  font-size: 30px;
+  margin-top: 3rem;
+  color: #000000;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+.carousel {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  text-align: center;
+  margin: 0 auto; 
+  margin-bottom: 6rem;
+  margin-top: 3rem;
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgb(220, 237, 255) 0%, rgb(255, 255, 255) 100%);
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+  opacity: 0.9;
+  transition: opacity 0.5s ease-in-out;
+}
+.slide:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+.stars {
+  color: #f8d132;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.testimonial {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #f9f9f9;
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #ffdd57;
+  margin-right: 15px;
+}
+.author div {
+  text-align: left;
+}
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  border: none;
+  padding: 10px 35px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #000000;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
 
 
+@media (max-width: 768px) {
+  .carousel {
+      max-width: 100%;
+  }
+  .author {
+      flex-direction: column;
+      text-align: center;
+  }
+  .author img {
+      margin-bottom: 10px;
+  }
+}
 
 
 
@@ -885,7 +994,7 @@ body {
 
 .input-field {
   background-color: var(--white-2);
-  color: var(--eerie-black);
+  color: black;
   font-size: var(--fs-5);
   padding: 15px;
   border-radius: var(--radius-2);
@@ -1572,7 +1681,7 @@ color: white;
   width: 100%;
   padding: 12px;
   background: linear-gradient(45deg, #007bff, #0056b3);
-  color: #fff;
+  color: #000000;
   font-size: 15px;
   font-weight: bold;
   border: none;
